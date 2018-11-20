@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="50dp">
+
+    <TextView
+        android:id="@+id/LijstCijfers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hier komt de lijst met ceifers"
+        app:layout_constraintBottom_toTopOf="@+id/gemidCijfers"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+    <TextView
+        android:id="@+id/gemidCijfers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="345dp"
+        android:text="hier komt het gemiddelde"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/LijstCijfers"
+        app:layout_constraintTop_toBottomOf="@+id/LijstCijfers" />
+
+    <EditText
+        android:id="@+id/inputGetal1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="number"
+        android:text="Number"
+       android:hint="geef geheel getal"/>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="210dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="11dp"
+        android:text="Button"
+        android:onClick="onRefresh"
+        app:layout_constraintBottom_toTopOf="@+id/LijstCijfers"
+        app:layout_constraintStart_toStartOf="@+id/inputGetal1"
+        app:layout_constraintTop_toBottomOf="@+id/inputGetal1" />
+
+</android.support.constraint.ConstraintLayout>

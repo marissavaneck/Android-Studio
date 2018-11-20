@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    tools:layout_editor_absoluteY="50dp">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <RadioGroup
+            android:id="@+id/myRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="16dp"
+            app:layout_constraintBottom_toTopOf="@+id/radioButtonBeste"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <RadioButton
+                android:id="@+id/radioButtonBeste"
+                android:layout_width="235dp"
+                android:layout_height="50dp"
+                android:layout_marginBottom="57dp"
+                android:layout_weight="1"
+                android:text="Beste"
+                app:layout_constraintBottom_toTopOf="@+id/linearLayout2"
+                app:layout_constraintStart_toStartOf="@+id/radioButton2"
+                app:layout_constraintTop_toBottomOf="@+id/myRadioGroup" />
+
+            <RadioButton
+                android:id="@+id/radioButtonMevrouw"
+                android:layout_width="290dp"
+                android:layout_height="83dp"
+                android:layout_marginTop="36dp"
+                android:layout_weight="1"
+                android:text="Mevrouw"
+                app:layout_constraintStart_toStartOf="@+id/radioButtonBeste"
+                app:layout_constraintTop_toTopOf="@+id/radioButtonBeste" />
+
+            <RadioButton
+                android:id="@+id/radioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="39dp"
+                android:layout_weight="1"
+                android:text="Mijnheer"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </RadioGroup>
+
+        <EditText
+            android:id="@+id/editText2"
+            android:layout_width="match_parent"
+            android:layout_height="66dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:text="Name" />
+
+        <CheckBox
+            android:id="@+id/checkBox"
+            android:layout_width="match_parent"
+            android:layout_height="51dp"
+            android:layout_marginEnd="31dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1"
+            android:text="Al jarig geweest"
+            app:layout_constraintEnd_toStartOf="@+id/editText3"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/editText3" />
+
+        <EditText
+            android:id="@+id/editText3"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginBottom="84dp"
+            android:layout_marginEnd="28dp"
+            android:layout_weight="1"
+            android:ems="10"
+            android:inputType="number"
+            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/checkBox"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout2" />
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="startSecondActivity"
+            android:text="Bereken leeftijd"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/editText3" />
+
+    </LinearLayout>
+
+
+</android.support.constraint.ConstraintLayout>
